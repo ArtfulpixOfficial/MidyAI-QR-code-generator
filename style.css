@@ -88,3 +88,35 @@ body{
     margin: auto;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .container p {
+    font-size: 14px;
+  }
+  .container input {
+    height: 40px;
+    padding: 8px;
+    margin: 8px 0 15px;
+  }
+  .container button {
+    height: 40px;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  #imgBox.show-img {
+    max-height: 200px;
+  }
+  .watch-link {
+    font-size: 10px;
+  }
+}
