@@ -1,92 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-body{
-    background: #262a2f;
-}
-.container{
-    width: 400px;
-    padding: 25px 35px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #fff;
-    border-radius: 10px;
-}
-.container p{
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 8px;
-}
-.container input{
-    width: 100%;
-    height: 50px;
-    border: 1px solid #000000;
-    outline: 0;
-    padding: 10px;
-    margin: 10px 0 20px;
-    border-radius: 5px;
-}
-.container button{
-    width: 100%;
-    height: 50px;
-    background: #000000;
-    color: #fff;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    margin: 20px 0;
-    font-weight: 500;
-}
-#imgBox{
-    width: 200px;
-    border-radius: 5px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s;
-}
-#imgBox img{
-    width: 100%;
-    padding: 10px;
-}
-#imgBox.show-img{
-    max-height: 300px;
-    margin: 10px auto;
-    border: 1px solid #d1d1d1;
-}
-.error{
-    animation: shake 0.1s linear 10;
-}
-@keyframes shake{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(-2px);
-    }
-    50%{
-        transform: translateX(0);
-    }
-    75%{
-        transform: translateX(2px);
-    }
-   100%{
-        transform: translateX(0);
-    }
+body {
+  background: #0e0c15;
+  color: #fff;
 }
 
-.watch-link{
-    display: block;
-    font-size: 12px;
-    width: fit-content;
-    margin: auto;
-    text-decoration: none;
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  justify-content: center;
+  min-height: 100vh;
+  /* position: absolute; */
+}
+
+.message h1 {
+  font-size: 52px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.message h2 {
+  font-size: 16px;
+  color: rgb(186 186 186);
+  text-align: center;
+}
+
+.message img {
+  width: 100px;
+  height: 100px;
+}
+
+.message input {
+  height: 55px;
+  padding: 15px;
+  font-size: 16px;
+  color: rgb(201 215 245);
+  background-color: rgb(32 36 44);
+  border: 2px solid rgb(32 36 44);
+  outline: #0e0c15;
+  width: 42vw;
+  border-radius: 2.5rem;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.generate-button {
+  width: 18%;
+  height: 55px;
+  color: #000000;
+  background: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.container {
+  width: 400px;
+  padding: 25px 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+}
+.container p {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.container input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #000000;
+  outline: 0;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+}
+.container button {
+  width: 100%;
+  height: 50px;
+  background: #000000;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 500;
+}
+#imgBox {
+  width: 225px;
+  /* height: 200px; */
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+#imgBox img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+#imgBox.show-img {
+  max-height: 400px;
+  margin: 10px auto;
+  border: 1px solid #d1d1d1;
+}
+.error {
+  animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.watch-link {
+  display: block;
+  font-size: 12px;
+  width: fit-content;
+  margin: auto;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -114,7 +175,7 @@ body{
     font-size: 14px;
   }
   #imgBox.show-img {
-    max-height: 200px;
+    max-height: 300px;
   }
   .watch-link {
     font-size: 10px;
